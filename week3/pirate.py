@@ -16,6 +16,24 @@ ingredients = {
     "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
 }
 
+drink_adjs = [
+    "Swashbuckling",
+    "Barbaric",
+    "Fearsome",
+    "Nautical",
+    "Vile",
+    "Cutthroat"
+]
+
+drink_nouns = [
+    "Galleon",
+    "Heist",
+    "Ruffian",
+    "Conquest",
+    "Plank",
+    "Marauder"
+]
+
 # Write a function to ask what style of drink a customer likes:
 # - The function should ask each of the questions in the questions dictionary, and gather the responses in a new dictionary.
 # - The new dictionary should contain the type of ingredient (for example "salty", or "sweet"), mapped to a Boolean (True or False) value.
@@ -26,7 +44,7 @@ responses = {}
 
 def ask_questions():
     for flavor, question in questions.items():
-        print question, "(y/yes or n/no)"
+        print question, "(y/yes or n/no)",
         answer = raw_input()
         if answer == "yes" or answer =="y":
             responses[flavor] = True
@@ -48,12 +66,25 @@ def make_drinks(responses):
             drink.append(random_ingredient)
     return drink
 
+def name_drinks():
+    drink_adj = random.choice(drink_adjs)
+    drink_noun = random.choice(drink_nouns)
+    drink_name = drink_adj + " " + drink_noun
+    return drink_name
 
 # Provide a main function
 def main():
-    ask_questions()
-    print "your drink has the following ingredients:"
-    print make_drinks(responses)
+    print "Would you like a drink? (y/yes or n/no)",
+    drink_yn = raw_input()
+    while drink_yn == "y" or drink_yn == "yes":
+        ask_questions()
+        print "\nYour drink is named:",
+        print name_drinks()
+        print "Your drink has the following ingredients:",
+        print make_drinks(responses)
+        print "\n Would you like another drink? (y/yes or n/no)",
+        drink_yn = raw_input()
+    print "okay bai"
 
 if __name__=="__main__":
     main() 

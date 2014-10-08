@@ -1,0 +1,1465 @@
+Last login: Tue Sep 23 20:18:34 on ttys002
+rumpelstiltskin:week1 jsngo$ python
+Python 2.7.5 (default, Mar  9 2014, 22:15:05) 
+[GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.0.68)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> with open('names.txt') as f: 
+...     data = f.readlines()
+... 
+>>> data
+['Black Widow\n', 'Wonder Woman\n', 'Atom Girl\n', 'Rainbow Brite\n', 'She Ra\n', 'Captain Marvel\n', 'Lightning Lass\n', 'Red Guardian\n', 'Crimson Avenger\n', 'White Witch\n', 'Wind Dancer\n', 'Miss Victory\n', 'Poison Ivy\n', 'Killer Frost\n', 'Dark Phoenix\n', 'Lady Mastermind\n', 'Silk Fever\n', 'Princess Python\n', 'Amazing Grace\n', 'Doctor Poison\n', 'Emerald Empress\n', 'Granny Goodness\n', 'Saturn Queen\n', 'Silver Banshee\n', 'Star Sapphire\n', 'Pink Pearl\n']
+>>> for name in data:
+...     print name.strip()
+... 
+Black Widow
+Wonder Woman
+Atom Girl
+Rainbow Brite
+She Ra
+Captain Marvel
+Lightning Lass
+Red Guardian
+Crimson Avenger
+White Witch
+Wind Dancer
+Miss Victory
+Poison Ivy
+Killer Frost
+Dark Phoenix
+Lady Mastermind
+Silk Fever
+Princess Python
+Amazing Grace
+Doctor Poison
+Emerald Empress
+Granny Goodness
+Saturn Queen
+Silver Banshee
+Star Sapphire
+Pink Pearl
+>>> print data[9]
+White Witch
+
+>>> for name in data:
+...     name = name.strip()
+...     name_pieces = name.split(" ")
+...     first_name = name_pieces[0]
+...     last_name = name_pieces[1]
+...     print random.choice(first_name) + random.choice(last_name)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+NameError: name 'random' is not defined
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     first_name = name_pieces[0]
+...     last_name = name_pieces[1]
+...     import random
+...     print random.choice(first_name) + random.choice(last_name)
+... 
+co
+nn
+ol
+RB
+h
+
+tM
+is
+dr
+mv
+ti
+ir
+sc
+oy
+Kr
+Dx
+yi
+kr
+sn
+Ar
+to
+lr
+G
+
+nu
+rB
+S
+
+kP
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     print name_pieces
+... 
+['Black', 'Widow\n']
+['Wonder', 'Woman\n']
+['Atom', 'Girl\n']
+['Rainbow', 'Brite\n']
+['She', 'Ra\n']
+['Captain', 'Marvel\n']
+['Lightning', 'Lass\n']
+['Red', 'Guardian\n']
+['Crimson', 'Avenger\n']
+['White', 'Witch\n']
+['Wind', 'Dancer\n']
+['Miss', 'Victory\n']
+['Poison', 'Ivy\n']
+['Killer', 'Frost\n']
+['Dark', 'Phoenix\n']
+['Lady', 'Mastermind\n']
+['Silk', 'Fever\n']
+['Princess', 'Python\n']
+['Amazing', 'Grace\n']
+['Doctor', 'Poison\n']
+['Emerald', 'Empress\n']
+['Granny', 'Goodness\n']
+['Saturn', 'Queen\n']
+['Silver', 'Banshee\n']
+['Star', 'Sapphire\n']
+['Pink', 'Pearl\n']
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     first_name = name_pieces[0]
+...     print first_name
+... 
+Black
+Wonder
+Atom
+Rainbow
+She
+Captain
+Lightning
+Red
+Crimson
+White
+Wind
+Miss
+Poison
+Killer
+Dark
+Lady
+Silk
+Princess
+Amazing
+Doctor
+Emerald
+Granny
+Saturn
+Silver
+Star
+Pink
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     first_name = name_pieces[0]
+...     last_name = name_pieces[1]
+...     
+>>> print first_name, last_name
+Pink Pearl
+
+>>> print random.choice(first_name)
+k
+>>> print first_name
+Pink
+>>> random.choice(data)
+'Wonder Woman\n'
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     first_name = name_pieces[0]
+...     last_name = name_pieces[1]
+...     first_name_list = first_name_list...     
+KeyboardInterrupt
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     first_name = name_pieces[0]
+...     last_name = name_pieces[1]
+...     print first_name, last_name
+... 
+Black Widow
+
+Wonder Woman
+
+Atom Girl
+
+Rainbow Brite
+
+She Ra
+
+Captain Marvel
+
+Lightning Lass
+
+Red Guardian
+
+Crimson Avenger
+
+White Witch
+
+Wind Dancer
+
+Miss Victory
+
+Poison Ivy
+
+Killer Frost
+
+Dark Phoenix
+
+Lady Mastermind
+
+Silk Fever
+
+Princess Python
+
+Amazing Grace
+
+Doctor Poison
+
+Emerald Empress
+
+Granny Goodness
+
+Saturn Queen
+
+Silver Banshee
+
+Star Sapphire
+
+Pink Pearl
+
+>>> first_names = []
+>>> last_names = []
+>>> len(first_names)
+0
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     print len(name_pieces)
+...     print type(name_pieces)
+... 
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+2
+<type 'list'>
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     first_name = name_pieces[0]
+...     first_names.append(first_name)
+...     last_name = name_pieces[1]
+...     last_names.append(last_name)
+... 
+>>> print last_names
+['Widow\n', 'Woman\n', 'Girl\n', 'Brite\n', 'Ra\n', 'Marvel\n', 'Lass\n', 'Guardian\n', 'Avenger\n', 'Witch\n', 'Dancer\n', 'Victory\n', 'Ivy\n', 'Frost\n', 'Phoenix\n', 'Mastermind\n', 'Fever\n', 'Python\n', 'Grace\n', 'Poison\n', 'Empress\n', 'Goodness\n', 'Queen\n', 'Banshee\n', 'Sapphire\n', 'Pearl\n']
+>>> print first_names
+['Black', 'Wonder', 'Atom', 'Rainbow', 'She', 'Captain', 'Lightning', 'Red', 'Crimson', 'White', 'Wind', 'Miss', 'Poison', 'Killer', 'Dark', 'Lady', 'Silk', 'Princess', 'Amazing', 'Doctor', 'Emerald', 'Granny', 'Saturn', 'Silver', 'Star', 'Pink']
+>>> for name in data:
+...     name_pieces = name.strip().split()
+...     first_name = name_pieces[0]
+...     imaginary.append(first_name)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+NameError: name 'imaginary' is not defined
+>>> import random
+>>> print random.choice(first_names) + " " + random.choice(last_names)
+Atom Python
+
+>>> print "{} {}".format(first_name, last_name)
+Black Pearl
+
+>>> print "{first} {last}".format(first=first_name, last=last_name)
+Black Pearl
+
+>>> for name in data:
+...     name_pieces = name.split(" ")
+...     first_name = name_pieces[0]
+...     first_names.append(first_name)
+...     last_name = name_pieces[1]
+...     last_names.append(last_name)
+... 
+>>> def name_generator():
+...     first_name = random.choice(first_names)
+...     last_name = random.choice(last_names)
+...     if first_name == last_name:
+...             print "same first and last detected"
+...             last_name = random.choice(last_names)
+...     print first_name + " " + last_name
+... 
+>>> name_generator()
+Star Girl
+
+>>> name_generator()
+Lightning Banshee
+
+>>> 
+>>> name_generator()
+Poison Frost
+
+>>> name_generator()
+Crimson Brite
+
+>>> name_generator()
+Dark Banshee
+
+>>> name_generator()
+Red Witch
+
+>>> name_generator()
+Atom Avenger
+
+>>> name_generator()
+Black Pearl
+
+>>> name_generator()
+Silk Witch
+
+>>> name_generator()
+White Goodness
+
+>>> name_generator()
+Captain Empress
+
+>>> name_generator()
+Pink Poison
+
+>>> name_generator()
+Emerald Queen
+
+>>> name_generator()
+Captain Empress
+
+>>> name_generator()
+Red Fever
+
+>>> name_generator()
+Lady Python
+
+>>> name_generator()
+Silk Grace
+
+>>>     print first_name + " " + last_name
+  File "<stdin>", line 1
+    print first_name + " " + last_name
+    ^
+IndentationError: unexpected indent
+>>> name_generator()
+Red Ivy
+
+>>> name_generator()
+Princess Lass
+
+>>> name_generator()
+Lightning Banshee
+
+>>> name_generator()
+Emerald Brite
+
+>>> name_generator()
+Rainbow Victory
+
+>>> name_generator()
+Star Widow
+
+>>> name_generator()
+Silver Avenger
+
+>>> name_generator()
+Lightning Avenger
+
+>>> name_generator()
+She Marvel
+
+>>> name_generator()
+Princess Pearl
+
+>>> name_generator()
+She Girl
+
+>>> name_generator()
+Atom Frost
+
+>>> name_generator()
+White Fever
+
+>>> name_generator()
+Red Grace
+
+>>> name_generator()
+Wind Phoenix
+
+>>> name_generator()
+Killer Sapphire
+
+>>> name_generator()
+Crimson Victory
+
+>>>     print first_name + " " + last_name
+  File "<stdin>", line 1
+    print first_name + " " + last_name
+    ^
+IndentationError: unexpected indent
+>>> name_generator()
+Princess Phoenix
+
+>>> name_generator()
+Dark Python
+
+>>> name_generator()
+Dark Python
+
+>>> name_generator()
+Lightning Lass
+
+>>> name_generator()
+Poison Queen
+
+>>> name_generator()
+Rainbow Widow
+
+>>> name_generator()
+Poison Sapphire
+
+>>> name_generator()
+White Ra
+
+>>> name_generator()
+Silver Pearl
+
+>>> name_generator()
+White Avenger
+
+>>> name_generator()
+Crimson Marvel
+
+>>> name_generator()
+White Witch
+
+>>> name_generator()
+Silk Brite
+
+>>> name_generator()
+Silk Pearl
+
+>>> name_generator()
+Saturn Empress
+
+>>> name_generator()
+Crimson Phoenix
+
+>>> name_generator()
+Lady Woman
+
+>>> name_generator()
+Lightning Avenger
+
+>>> name_generator()
+Emerald Queen
+
+>>> name_generator()
+Doctor Girl
+
+>>> name_generator()
+Emerald Goodness
+
+>>> name_generator()
+Silver Girl
+
+>>> name_generator()
+Crimson Grace
+
+>>> name_generator()
+Wind Ra
+
+>>> name_generator()
+Rainbow Fever
+
+>>> name_generator()
+Amazing Brite
+
+>>> def adj_name_generator():
+...     first_name = random.choice(first_names)
+...     last_name = random.choice(last.names)
+...     
+... 
+>>> with open('villains.txt') as f:
+...     vdata = f.readlines()
+... 
+>>> vdata
+['abhorrent\n', 'abusive\n', 'acerbic\n', 'acrid\n', 'aggressive\n', 'amoral\n', 'anarchic\n', 'annoying\n', 'antagonistic\n', 'arrogant\n', 'atrocious\n', 'avaricious\n', 'awful\n', 'bad\n', 'base\n', 'belligerent\n', 'bizarre\n', 'bothersome\n', 'brazen\n', 'byzantine\n', 'carnivorous\n', 'caustic\n', 'clueless\n', 'cold-blooded\n', 'conspiratorial\n', 'contemptible\n', 'cowardly\n', 'crazy\n', 'criminal\n', 'cut-throat\n', 'damnable\n', 'deadly\n', 'deceitful\n', 'demented\n', 'demonic\n', 'despicable\n', 'deviant\n', 'devilish\n', 'devious\n', 'diabolical\n', 'discourteous\n', 'diseased\n', 'disgusting\n', 'double-talking\n', 'dreadful\n', 'egotistical\n', 'evil\n', 'foul\n', 'fraudulent\n', 'frigid\n', 'furious\n', 'gelatinous\n', 'greedy\n', 'grim\n', 'grotesque\n', 'heartless\n', 'hideous\n', 'homicidal\n', 'horrible\n', 'hostile\n', 'hypocritical\n', 'idiotic\n', 'ignoble\n', 'ignorant\n', 'imbecilic\n', 'immoral\n', 'impolite\n', 'indescribable\n', 'infamous\n', 'infernal\n', 'insane\n', 'insidious\n', 'intangible\n', 'irritating\n', 'lazy\n', 'loathsome\n', 'loony\n', 'mad\n', 'maleficent\n', 'malevolent\n', 'maniacal\n', 'manipulative\n', 'merciless\n', 'mesmerizing\n', 'mind-numbing\n', 'mischievous\n', 'miserly\n', 'monstrous\n', 'mordant\n', 'naughty\n', 'nefarious\n', 'noxious\n', 'obscene\n', 'odious\n', 'omnivorous\n', 'opportunistic\n', 'perverted\n', 'poisonous\n', 'politically incorrect\n', 'puerile\n', 'psychotic\n', 'quarrelsome\n', 'rabid\n', 'radioactive\n', 'rancorous\n', 'raving\n', 'repugnant\n', 'repulsive\n', 'revolting\n', 'sarcastic\n', 'satanic\n', 'savage\n', 'scowling\n', 'secretive\n', 'self-righteous\n', 'sepulchral\n', 'sinful\n', 'smelly\n', 'socio-pathic\n', 'spiteful\n', 'strange\n', 'subterranean\n', 'tasteless\n', 'terrible\n', 'ugly\n', 'uncaring\n', 'unethical\n', 'unholy\n', 'unkind\n', 'unloved\n', 'unlucky\n', 'unpleasant\n', 'vengeful\n', 'vicious\n', 'vile\n', 'violent\n', 'warped\n', 'weird\n', 'wicked\n', 'wingless\n', 'wretched\n']
+>>> for name in vdata:
+...     name = name.strip().title()
+...     print name
+... 
+Abhorrent
+Abusive
+Acerbic
+Acrid
+Aggressive
+Amoral
+Anarchic
+Annoying
+Antagonistic
+Arrogant
+Atrocious
+Avaricious
+Awful
+Bad
+Base
+Belligerent
+Bizarre
+Bothersome
+Brazen
+Byzantine
+Carnivorous
+Caustic
+Clueless
+Cold-Blooded
+Conspiratorial
+Contemptible
+Cowardly
+Crazy
+Criminal
+Cut-Throat
+Damnable
+Deadly
+Deceitful
+Demented
+Demonic
+Despicable
+Deviant
+Devilish
+Devious
+Diabolical
+Discourteous
+Diseased
+Disgusting
+Double-Talking
+Dreadful
+Egotistical
+Evil
+Foul
+Fraudulent
+Frigid
+Furious
+Gelatinous
+Greedy
+Grim
+Grotesque
+Heartless
+Hideous
+Homicidal
+Horrible
+Hostile
+Hypocritical
+Idiotic
+Ignoble
+Ignorant
+Imbecilic
+Immoral
+Impolite
+Indescribable
+Infamous
+Infernal
+Insane
+Insidious
+Intangible
+Irritating
+Lazy
+Loathsome
+Loony
+Mad
+Maleficent
+Malevolent
+Maniacal
+Manipulative
+Merciless
+Mesmerizing
+Mind-Numbing
+Mischievous
+Miserly
+Monstrous
+Mordant
+Naughty
+Nefarious
+Noxious
+Obscene
+Odious
+Omnivorous
+Opportunistic
+Perverted
+Poisonous
+Politically Incorrect
+Puerile
+Psychotic
+Quarrelsome
+Rabid
+Radioactive
+Rancorous
+Raving
+Repugnant
+Repulsive
+Revolting
+Sarcastic
+Satanic
+Savage
+Scowling
+Secretive
+Self-Righteous
+Sepulchral
+Sinful
+Smelly
+Socio-Pathic
+Spiteful
+Strange
+Subterranean
+Tasteless
+Terrible
+Ugly
+Uncaring
+Unethical
+Unholy
+Unkind
+Unloved
+Unlucky
+Unpleasant
+Vengeful
+Vicious
+Vile
+Violent
+Warped
+Weird
+Wicked
+Wingless
+Wretched
+>>> for name in vdata:
+...     name = name.strip().title()
+...     
+... vdata
+  File "<stdin>", line 4
+    vdata
+        ^
+SyntaxError: invalid syntax
+>>> 
+>>> vdata
+['abhorrent\n', 'abusive\n', 'acerbic\n', 'acrid\n', 'aggressive\n', 'amoral\n', 'anarchic\n', 'annoying\n', 'antagonistic\n', 'arrogant\n', 'atrocious\n', 'avaricious\n', 'awful\n', 'bad\n', 'base\n', 'belligerent\n', 'bizarre\n', 'bothersome\n', 'brazen\n', 'byzantine\n', 'carnivorous\n', 'caustic\n', 'clueless\n', 'cold-blooded\n', 'conspiratorial\n', 'contemptible\n', 'cowardly\n', 'crazy\n', 'criminal\n', 'cut-throat\n', 'damnable\n', 'deadly\n', 'deceitful\n', 'demented\n', 'demonic\n', 'despicable\n', 'deviant\n', 'devilish\n', 'devious\n', 'diabolical\n', 'discourteous\n', 'diseased\n', 'disgusting\n', 'double-talking\n', 'dreadful\n', 'egotistical\n', 'evil\n', 'foul\n', 'fraudulent\n', 'frigid\n', 'furious\n', 'gelatinous\n', 'greedy\n', 'grim\n', 'grotesque\n', 'heartless\n', 'hideous\n', 'homicidal\n', 'horrible\n', 'hostile\n', 'hypocritical\n', 'idiotic\n', 'ignoble\n', 'ignorant\n', 'imbecilic\n', 'immoral\n', 'impolite\n', 'indescribable\n', 'infamous\n', 'infernal\n', 'insane\n', 'insidious\n', 'intangible\n', 'irritating\n', 'lazy\n', 'loathsome\n', 'loony\n', 'mad\n', 'maleficent\n', 'malevolent\n', 'maniacal\n', 'manipulative\n', 'merciless\n', 'mesmerizing\n', 'mind-numbing\n', 'mischievous\n', 'miserly\n', 'monstrous\n', 'mordant\n', 'naughty\n', 'nefarious\n', 'noxious\n', 'obscene\n', 'odious\n', 'omnivorous\n', 'opportunistic\n', 'perverted\n', 'poisonous\n', 'politically incorrect\n', 'puerile\n', 'psychotic\n', 'quarrelsome\n', 'rabid\n', 'radioactive\n', 'rancorous\n', 'raving\n', 'repugnant\n', 'repulsive\n', 'revolting\n', 'sarcastic\n', 'satanic\n', 'savage\n', 'scowling\n', 'secretive\n', 'self-righteous\n', 'sepulchral\n', 'sinful\n', 'smelly\n', 'socio-pathic\n', 'spiteful\n', 'strange\n', 'subterranean\n', 'tasteless\n', 'terrible\n', 'ugly\n', 'uncaring\n', 'unethical\n', 'unholy\n', 'unkind\n', 'unloved\n', 'unlucky\n', 'unpleasant\n', 'vengeful\n', 'vicious\n', 'vile\n', 'violent\n', 'warped\n', 'weird\n', 'wicked\n', 'wingless\n', 'wretched\n']
+>>> villain_adjs = []
+>>> len(villain_adjs)
+0
+>>> for name in vdata:
+...     name = name.strip().title()
+...     villain_adjs.append(name)
+... 
+>>> villain_adjs
+['Abhorrent', 'Abusive', 'Acerbic', 'Acrid', 'Aggressive', 'Amoral', 'Anarchic', 'Annoying', 'Antagonistic', 'Arrogant', 'Atrocious', 'Avaricious', 'Awful', 'Bad', 'Base', 'Belligerent', 'Bizarre', 'Bothersome', 'Brazen', 'Byzantine', 'Carnivorous', 'Caustic', 'Clueless', 'Cold-Blooded', 'Conspiratorial', 'Contemptible', 'Cowardly', 'Crazy', 'Criminal', 'Cut-Throat', 'Damnable', 'Deadly', 'Deceitful', 'Demented', 'Demonic', 'Despicable', 'Deviant', 'Devilish', 'Devious', 'Diabolical', 'Discourteous', 'Diseased', 'Disgusting', 'Double-Talking', 'Dreadful', 'Egotistical', 'Evil', 'Foul', 'Fraudulent', 'Frigid', 'Furious', 'Gelatinous', 'Greedy', 'Grim', 'Grotesque', 'Heartless', 'Hideous', 'Homicidal', 'Horrible', 'Hostile', 'Hypocritical', 'Idiotic', 'Ignoble', 'Ignorant', 'Imbecilic', 'Immoral', 'Impolite', 'Indescribable', 'Infamous', 'Infernal', 'Insane', 'Insidious', 'Intangible', 'Irritating', 'Lazy', 'Loathsome', 'Loony', 'Mad', 'Maleficent', 'Malevolent', 'Maniacal', 'Manipulative', 'Merciless', 'Mesmerizing', 'Mind-Numbing', 'Mischievous', 'Miserly', 'Monstrous', 'Mordant', 'Naughty', 'Nefarious', 'Noxious', 'Obscene', 'Odious', 'Omnivorous', 'Opportunistic', 'Perverted', 'Poisonous', 'Politically Incorrect', 'Puerile', 'Psychotic', 'Quarrelsome', 'Rabid', 'Radioactive', 'Rancorous', 'Raving', 'Repugnant', 'Repulsive', 'Revolting', 'Sarcastic', 'Satanic', 'Savage', 'Scowling', 'Secretive', 'Self-Righteous', 'Sepulchral', 'Sinful', 'Smelly', 'Socio-Pathic', 'Spiteful', 'Strange', 'Subterranean', 'Tasteless', 'Terrible', 'Ugly', 'Uncaring', 'Unethical', 'Unholy', 'Unkind', 'Unloved', 'Unlucky', 'Unpleasant', 'Vengeful', 'Vicious', 'Vile', 'Violent', 'Warped', 'Weird', 'Wicked', 'Wingless', 'Wretched']
+>>> def villain_name_generator():
+...     villain_adj = random.choice(villain_adjs)
+...     first_name = random.choice(first_name)
+...     last_name = random.choice(last_name)
+...     print villain_adj + " " + first_name + " " + last_name
+... 
+>>> villain_name_generator()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in villain_name_generator
+UnboundLocalError: local variable 'first_name' referenced before assignment
+>>> def villain_name_generator():
+...     villain_adj = random.choice(villain_adjs)
+...     first_name = random.choice(first_names)
+...     last_name = random.choice(last_names)
+...     print villain_adj + " " + first_name + " " + last_name
+... 
+>>> villain_name_generator()
+Heartless Silk Dancer
+
+>>> villain_name_generator()
+Rabid Miss Avenger
+
+>>> villain_name_generator()
+Vicious Saturn Goodness
+
+>>> villain_name_generator()
+Self-Righteous Amazing Victory
+
+>>> villain_name_generator()
+Avaricious Star Widow
+
+>>> villain_name_generator()
+Perverted Silk Brite
+
+>>> villain_name_generator()
+Anarchic Granny Victory
+
+>>> villain_name_generator()
+Cold-Blooded Killer Guardian
+
+>>> villain_name_generator()
+Loathsome Saturn Avenger
+
+>>> villain_name_generator()
+Hostile Black Woman
+
+>>> villain_name_generator()
+Foul Atom Avenger
+
+>>> villain_name_generator()
+Loony Dark Guardian
+
+>>> villain_name_generator()
+Discourteous Amazing Victory
+
+>>> with open('output.txt', 'w') as f:
+...     f.writelines(data)
+... 
+>>> data
+['Black Widow\n', 'Wonder Woman\n', 'Atom Girl\n', 'Rainbow Brite\n', 'She Ra\n', 'Captain Marvel\n', 'Lightning Lass\n', 'Red Guardian\n', 'Crimson Avenger\n', 'White Witch\n', 'Wind Dancer\n', 'Miss Victory\n', 'Poison Ivy\n', 'Killer Frost\n', 'Dark Phoenix\n', 'Lady Mastermind\n', 'Silk Fever\n', 'Princess Python\n', 'Amazing Grace\n', 'Doctor Poison\n', 'Emerald Empress\n', 'Granny Goodness\n', 'Saturn Queen\n', 'Silver Banshee\n', 'Star Sapphire\n', 'Pink Pearl\n']
+>>> with open('output.txt', 'w') as f:
+...     f.writelines(villain_name_generator())
+... 
+Cut-Throat Killer Ivy
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: writelines() requires an iterable argument
+>>> with open('output.txt', 'w') as f:
+...     cool_name = villain_name_generator()
+...     f.writelines(cool_name)
+... 
+Politically Incorrect Doctor Brite
+
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+TypeError: writelines() requires an iterable argument
+>>> with open('output.txt', 'w') as f:
+...     cool_name = []
+...     
+... 
+>>> 
+>>> with open('output.txt', 'w') as f:
+...     cool_names = []
+...     cool_name = villain_name_generator()
+...     cool_names.append(cool_name)
+...     f.writelines(cool_names)
+... 
+Repulsive Dark Dancer
+
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+TypeError: writelines() argument must be a sequence of strings
+>>> with open('output.txt', 'w') as f:
+...     cool_names = []
+...     
+... 
+>>> with open('output.txt', 'w') as f:
+...     
+... 
+  File "<stdin>", line 3
+    
+    ^
+IndentationError: expected an indented block
+>>> cool_names = []
+>>> for name in vdata:
+...     name = name.strip().title()
+...     
+>>> 
+>>> for name in vdata:
+...     name = 
+  File "<stdin>", line 2
+    name = 
+          ^
+SyntaxError: invalid syntax
+>>> villain_ajds
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'villain_ajds' is not defined
+>>> villain_adjs
+['Abhorrent', 'Abusive', 'Acerbic', 'Acrid', 'Aggressive', 'Amoral', 'Anarchic', 'Annoying', 'Antagonistic', 'Arrogant', 'Atrocious', 'Avaricious', 'Awful', 'Bad', 'Base', 'Belligerent', 'Bizarre', 'Bothersome', 'Brazen', 'Byzantine', 'Carnivorous', 'Caustic', 'Clueless', 'Cold-Blooded', 'Conspiratorial', 'Contemptible', 'Cowardly', 'Crazy', 'Criminal', 'Cut-Throat', 'Damnable', 'Deadly', 'Deceitful', 'Demented', 'Demonic', 'Despicable', 'Deviant', 'Devilish', 'Devious', 'Diabolical', 'Discourteous', 'Diseased', 'Disgusting', 'Double-Talking', 'Dreadful', 'Egotistical', 'Evil', 'Foul', 'Fraudulent', 'Frigid', 'Furious', 'Gelatinous', 'Greedy', 'Grim', 'Grotesque', 'Heartless', 'Hideous', 'Homicidal', 'Horrible', 'Hostile', 'Hypocritical', 'Idiotic', 'Ignoble', 'Ignorant', 'Imbecilic', 'Immoral', 'Impolite', 'Indescribable', 'Infamous', 'Infernal', 'Insane', 'Insidious', 'Intangible', 'Irritating', 'Lazy', 'Loathsome', 'Loony', 'Mad', 'Maleficent', 'Malevolent', 'Maniacal', 'Manipulative', 'Merciless', 'Mesmerizing', 'Mind-Numbing', 'Mischievous', 'Miserly', 'Monstrous', 'Mordant', 'Naughty', 'Nefarious', 'Noxious', 'Obscene', 'Odious', 'Omnivorous', 'Opportunistic', 'Perverted', 'Poisonous', 'Politically Incorrect', 'Puerile', 'Psychotic', 'Quarrelsome', 'Rabid', 'Radioactive', 'Rancorous', 'Raving', 'Repugnant', 'Repulsive', 'Revolting', 'Sarcastic', 'Satanic', 'Savage', 'Scowling', 'Secretive', 'Self-Righteous', 'Sepulchral', 'Sinful', 'Smelly', 'Socio-Pathic', 'Spiteful', 'Strange', 'Subterranean', 'Tasteless', 'Terrible', 'Ugly', 'Uncaring', 'Unethical', 'Unholy', 'Unkind', 'Unloved', 'Unlucky', 'Unpleasant', 'Vengeful', 'Vicious', 'Vile', 'Violent', 'Warped', 'Weird', 'Wicked', 'Wingless', 'Wretched']
+>>> def villain_name_example(villain_adjs):
+...     for adj in villain_adjs:
+...         print adj
+... 
+>>> villian_name_example(villain_adjs)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'villian_name_example' is not defined
+>>> villain_name_example(villain_adjs)
+Abhorrent
+Abusive
+Acerbic
+Acrid
+Aggressive
+Amoral
+Anarchic
+Annoying
+Antagonistic
+Arrogant
+Atrocious
+Avaricious
+Awful
+Bad
+Base
+Belligerent
+Bizarre
+Bothersome
+Brazen
+Byzantine
+Carnivorous
+Caustic
+Clueless
+Cold-Blooded
+Conspiratorial
+Contemptible
+Cowardly
+Crazy
+Criminal
+Cut-Throat
+Damnable
+Deadly
+Deceitful
+Demented
+Demonic
+Despicable
+Deviant
+Devilish
+Devious
+Diabolical
+Discourteous
+Diseased
+Disgusting
+Double-Talking
+Dreadful
+Egotistical
+Evil
+Foul
+Fraudulent
+Frigid
+Furious
+Gelatinous
+Greedy
+Grim
+Grotesque
+Heartless
+Hideous
+Homicidal
+Horrible
+Hostile
+Hypocritical
+Idiotic
+Ignoble
+Ignorant
+Imbecilic
+Immoral
+Impolite
+Indescribable
+Infamous
+Infernal
+Insane
+Insidious
+Intangible
+Irritating
+Lazy
+Loathsome
+Loony
+Mad
+Maleficent
+Malevolent
+Maniacal
+Manipulative
+Merciless
+Mesmerizing
+Mind-Numbing
+Mischievous
+Miserly
+Monstrous
+Mordant
+Naughty
+Nefarious
+Noxious
+Obscene
+Odious
+Omnivorous
+Opportunistic
+Perverted
+Poisonous
+Politically Incorrect
+Puerile
+Psychotic
+Quarrelsome
+Rabid
+Radioactive
+Rancorous
+Raving
+Repugnant
+Repulsive
+Revolting
+Sarcastic
+Satanic
+Savage
+Scowling
+Secretive
+Self-Righteous
+Sepulchral
+Sinful
+Smelly
+Socio-Pathic
+Spiteful
+Strange
+Subterranean
+Tasteless
+Terrible
+Ugly
+Uncaring
+Unethical
+Unholy
+Unkind
+Unloved
+Unlucky
+Unpleasant
+Vengeful
+Vicious
+Vile
+Violent
+Warped
+Weird
+Wicked
+Wingless
+Wretched
+>>> def villain_name_example(villain_adjs):
+KeyboardInterrupt
+>>> def villain_name_example(adj_list):
+...     for adj in adj_list:
+...         print adj
+... 
+>>> villain_name_example(villain_adjs)
+Abhorrent
+Abusive
+Acerbic
+Acrid
+Aggressive
+Amoral
+Anarchic
+Annoying
+Antagonistic
+Arrogant
+Atrocious
+Avaricious
+Awful
+Bad
+Base
+Belligerent
+Bizarre
+Bothersome
+Brazen
+Byzantine
+Carnivorous
+Caustic
+Clueless
+Cold-Blooded
+Conspiratorial
+Contemptible
+Cowardly
+Crazy
+Criminal
+Cut-Throat
+Damnable
+Deadly
+Deceitful
+Demented
+Demonic
+Despicable
+Deviant
+Devilish
+Devious
+Diabolical
+Discourteous
+Diseased
+Disgusting
+Double-Talking
+Dreadful
+Egotistical
+Evil
+Foul
+Fraudulent
+Frigid
+Furious
+Gelatinous
+Greedy
+Grim
+Grotesque
+Heartless
+Hideous
+Homicidal
+Horrible
+Hostile
+Hypocritical
+Idiotic
+Ignoble
+Ignorant
+Imbecilic
+Immoral
+Impolite
+Indescribable
+Infamous
+Infernal
+Insane
+Insidious
+Intangible
+Irritating
+Lazy
+Loathsome
+Loony
+Mad
+Maleficent
+Malevolent
+Maniacal
+Manipulative
+Merciless
+Mesmerizing
+Mind-Numbing
+Mischievous
+Miserly
+Monstrous
+Mordant
+Naughty
+Nefarious
+Noxious
+Obscene
+Odious
+Omnivorous
+Opportunistic
+Perverted
+Poisonous
+Politically Incorrect
+Puerile
+Psychotic
+Quarrelsome
+Rabid
+Radioactive
+Rancorous
+Raving
+Repugnant
+Repulsive
+Revolting
+Sarcastic
+Satanic
+Savage
+Scowling
+Secretive
+Self-Righteous
+Sepulchral
+Sinful
+Smelly
+Socio-Pathic
+Spiteful
+Strange
+Subterranean
+Tasteless
+Terrible
+Ugly
+Uncaring
+Unethical
+Unholy
+Unkind
+Unloved
+Unlucky
+Unpleasant
+Vengeful
+Vicious
+Vile
+Violent
+Warped
+Weird
+Wicked
+Wingless
+Wretched
+>>> def villain_name_example(adj_list):
+...     villain_adj = random.choice(villain_adjs)
+...     print villain_adj
+... 
+>>> def villain_name_example(adj_list):
+... 
+  File "<stdin>", line 2
+    
+    ^
+IndentationError: expected an indented block
+>>> villain_name_example(villain_adjs)
+Repugnant
+>>> first_names
+['Black', 'Wonder', 'Atom', 'Rainbow', 'She', 'Captain', 'Lightning', 'Red', 'Crimson', 'White', 'Wind', 'Miss', 'Poison', 'Killer', 'Dark', 'Lady', 'Silk', 'Princess', 'Amazing', 'Doctor', 'Emerald', 'Granny', 'Saturn', 'Silver', 'Star', 'Pink', 'Black', 'Wonder', 'Atom', 'Rainbow', 'She', 'Captain', 'Lightning', 'Red', 'Crimson', 'White', 'Wind', 'Miss', 'Poison', 'Killer', 'Dark', 'Lady', 'Silk', 'Princess', 'Amazing', 'Doctor', 'Emerald', 'Granny', 'Saturn', 'Silver', 'Star', 'Pink']
+>>> def villain_name_example(adj_list, x, y):
+...     villain_adj = random.choice(villain_adjs)
+...     first_name = random.choice(x)
+...     last_name = random.choice(y)
+...     print villain_adj, first_name, last_name
+... 
+>>> villain_name_example(villain_adjs)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: villain_name_example() takes exactly 3 arguments (1 given)
+>>> villain_name_example(villain_adjs, first_names, last_names)
+Secretive Silver Dancer
+
+>>> len(villain_adjs)
+141
+>>> len(first_names))
+  File "<stdin>", line 1
+    len(first_names))
+                    ^
+SyntaxError: invalid syntax
+>>> len(first_names)
+52
+>>> len(last_names)
+52
+>>> [1, 2, 3]
+[1, 2, 3]
+>>> ex = [1, 2, 3]
+>>> len(ex)
+3
+>>> for i in range(len(ex))
+  File "<stdin>", line 1
+    for i in range(len(ex))
+                          ^
+SyntaxError: invalid syntax
+>>> for i in range(len(ex)):
+...     print i
+... 
+0
+1
+2
+>>> for i in ex:
+...     print i
+... 
+1
+2
+3
+>>> range(3)
+[0, 1, 2]
+>>> def villain_name_example(adj_list, x, y):
+...     for i in range(len(x)):
+...         print i
+... 
+>>> villain_name_example(villain_adjs, first_names, last_names)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+>>> def villain_name_example(adj_list, x, y):
+...     for i in range(len(x)):
+...         villain_adj = random.choice(villain_adjs)
+...         print villain_adj
+... 
+>>> 
+>>> villain_name_example(villain_adjs, first_names, last_names)
+Aggressive
+Bothersome
+Obscene
+Hideous
+Foul
+Secretive
+Frigid
+Unloved
+Weird
+Smelly
+Wingless
+Tasteless
+Intangible
+Quarrelsome
+Violent
+Irritating
+Amoral
+Bizarre
+Sarcastic
+Sepulchral
+Grotesque
+Wretched
+Double-Talking
+Loathsome
+Subterranean
+Secretive
+Acrid
+Rabid
+Terrible
+Conspiratorial
+Loathsome
+Evil
+Acrid
+Sinful
+Unlucky
+Spiteful
+Arrogant
+Strange
+Devilish
+Monstrous
+Idiotic
+Furious
+Disgusting
+Mad
+Heartless
+Avaricious
+Raving
+Violent
+Repulsive
+Weird
+Bothersome
+Naughty
+>>> def villain_name_example(adj_list, x, y):
+...     for i in range(len(x)):
+...         villain_adj = random.choice(villain_adjs)
+...         first_name = random.choice(x)
+...         last_name = random.choice(y)
+...         print villain_adj, first_name, last_name
+... 
+>>> villain_name_example(villain_adjs, first_names, last_names)
+Base Lightning Pearl
+
+Discourteous Emerald Ivy
+
+Heartless Emerald Guardian
+
+Bothersome Lady Python
+
+Double-Talking Rainbow Grace
+
+Socio-Pathic Princess Ra
+
+Frigid Doctor Fever
+
+Bothersome Atom Ra
+
+Abhorrent Emerald Fever
+
+Violent Crimson Banshee
+
+Grim Captain Empress
+
+Rabid Emerald Victory
+
+Obscene Silver Woman
+
+Repugnant Lightning Pearl
+
+Omnivorous Crimson Sapphire
+
+Abhorrent Saturn Frost
+
+Secretive Red Fever
+
+Heartless Black Python
+
+Lazy Miss Pearl
+
+Grim Dark Pearl
+
+Poisonous Pink Frost
+
+Amoral Doctor Queen
+
+Terrible Captain Banshee
+
+Insidious Saturn Sapphire
+
+Socio-Pathic Granny Mastermind
+
+Dreadful Granny Girl
+
+Hideous Wind Python
+
+Savage Dark Witch
+
+Ignoble Wind Phoenix
+
+Vicious Lightning Dancer
+
+Psychotic Red Victory
+
+Violent Lightning Lass
+
+Noxious Granny Dancer
+
+Unkind Red Dancer
+
+Furious Granny Banshee
+
+Unkind Amazing Pearl
+
+Odious Saturn Dancer
+
+Insidious Crimson Girl
+
+Poisonous Granny Sapphire
+
+Abusive Dark Poison
+
+Anarchic Black Fever
+
+Irritating Poison Phoenix
+
+Avaricious Star Marvel
+
+Infamous Dark Grace
+
+Nefarious Captain Goodness
+
+Maniacal White Avenger
+
+Furious Lightning Woman
+
+Anarchic Doctor Python
+
+Mind-Numbing Miss Pearl
+
+Wingless Wonder Queen
+
+Tasteless She Victory
+
+Deviant Silver Victory
+
+>>> def villain_name_example(adj_list, x, y):
+...     for i in range(len(x)):
+...         villain_adj = random.choice(villain_adjs)
+...         first_name = random.choice(x)
+...         last_name = random.choice(y)
+... 
+>>>         # instead of printing, append to new list
+...     print villain_adj, first_name, last_name
+  File "<stdin>", line 2
+    print villain_adj, first_name, last_name
+    ^
+IndentationError: unexpected indent
+>>> def villain_name_example(adj_list, x, y):
+...     for i in range(len(x)):
+...         villain_adj = random.choice(villain_adjs)
+...         first_name = random.choice(x)
+...         last_name = random.choice(y)
+... 
+>>>         # instead of printing, append to new list
+...         # instead of printing, append to new list
+... 
+>>> def villain_name_example(adj_list, x, y):
+...     for i in range(len(x)):
+...         villain_adj = random.choice(villain_adjs)
+...         first_name = random.choice(x)
+...         last_name = random.choice(y)
+... 
+>>>         # instead of printing, append to new list
+...     return villain_adj, first_name, last_name
+KeyboardInterrupt
+>>> def villain_name_example(adj_list, x, y):
+...     for i in range(len(x)):
+...         villain_adj = random.choice(villain_adjs)
+...         first_name = random.choice(x)
+...         last_name = random.choice(y)
+... 
+>>>     print villain_adj, first_name, last_name
+  File "<stdin>", line 1
+    print villain_adj, first_name, last_name
+    ^
+IndentationError: unexpected indent
+>>> def villain_name_example(adj_list, x, y):
+...     for i in range(len(x)):
+...         villain_adj = random.choice(villain_adjs)
+...         first_name = random.choice(x)
+...         last_name = random.choice(y)
+...     print villain_adj, first_name, last_name
+... 
+>>> villain_name_example(villain_adjs, first_names, last_names)
+Mind-Numbing Rainbow Python
+
+>>> data
+['Black Widow\n', 'Wonder Woman\n', 'Atom Girl\n', 'Rainbow Brite\n', 'She Ra\n', 'Captain Marvel\n', 'Lightning Lass\n', 'Red Guardian\n', 'Crimson Avenger\n', 'White Witch\n', 'Wind Dancer\n', 'Miss Victory\n', 'Poison Ivy\n', 'Killer Frost\n', 'Dark Phoenix\n', 'Lady Mastermind\n', 'Silk Fever\n', 'Princess Python\n', 'Amazing Grace\n', 'Doctor Poison\n', 'Emerald Empress\n', 'Granny Goodness\n', 'Saturn Queen\n', 'Silver Banshee\n', 'Star Sapphire\n', 'Pink Pearl\n']
+>>> with open('output.txt', 'w') as f:
+...     f.writelines(villain_adjs)
+... 
+>>> >>>

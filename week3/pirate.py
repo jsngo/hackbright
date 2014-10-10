@@ -1,3 +1,5 @@
+# http://labs.bewd.co/pocket-dictionaries/
+
 import random 
 
 questions = {
@@ -66,6 +68,7 @@ def make_drinks(responses):
             drink.append(random_ingredient)
     return drink
 
+# Random drink name generator
 def name_drinks():
     drink_adj = random.choice(drink_adjs)
     drink_noun = random.choice(drink_nouns)

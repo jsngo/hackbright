@@ -2,6 +2,11 @@
 
 import csv
 
+# 87 Coral Rd is swept on Mondays only.
+# 60 Fanning Way is swept on Tuesdays only.
+# 50 Delmar St is swept on Wednesdays and Fridays.
+# 33 Vesta St is swept on Tuesdays and Thursdays.
+# 77 Dukes Ct is swept on Fridays only.
 
 # write a function that takes a street name and tells you if it is going to be swept tomorrow.
 
@@ -24,6 +29,15 @@ def swept_most():
             max_day = d
     print "{} is the day with the most street sweeping: {}".format(max_day, max_sweeps)
 
+
+def swept_tomorrow(street_name, house_number):
+   if this_part_of_street_will_be_swept_tomorrow:
+       return True
+   else:
+       return False
+
+result = swept_tomorrow("Dukes Ct", 77)
+print "If tomorrow is Friday, this should be True: {}".format(result)
 
 def main():
     

@@ -43,6 +43,10 @@ def wave():
 def toot():
 	speak("**toot**")
 
+# Define an perform_action function that takes a verb and either:
+# - prints out a more descriptive action if asked a certain string, pulled from a dictionary (action_map)
+# - prints out a "comeback" sentence if asked a certain string, pulled from a dictionary (comeback_map)
+# - prints out an "action" style message, adding 's' to the verb.
 def perform_action(bot_name, verb):
 	if verb in action_map:
 		speak(bot_name + " " + action_map[verb])
@@ -53,10 +57,13 @@ def perform_action(bot_name, verb):
 
 def brain():
 	booted_ok = boot()
-
+	
+	# when hugbot is given a name
 	if booted_ok:
+		# using a while loop, once Hugbot has responded to the user's request, just go round again and ask them for a new thing to do
 		while True:
 			action = raw_input("What should Hugbot do? ")
+			
 			# if action not in hugbot_actions:
 			# 	speak("Hugbot doesn't have this feature")
 			# if action == "hug":
@@ -65,12 +72,20 @@ def brain():
 			# 	wave()
 			# if action == "toot":
 			# 	toot()
+
+			# exit the function (with return) if the user types in 'quit' as the answer to that question
 			if action == "quit":
 				return
+
+			# perform the action!
 			if action != "":
 				perform_action(booted_ok, action)
+			
+			# for when the user doesn't enter anything
 			else:
 				print "COMMAND THE BOT"
+	
+	# when hugbot isn't given a name
 	else:
 		speak("System failure booooo")
 

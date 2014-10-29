@@ -43,7 +43,7 @@ def wave():
 def toot():
 	speak("**toot**")
 
-# Define an perform_action function that takes a verb and either:
+# takes in a bot_name and verb and either:
 # - prints out a more descriptive action if asked a certain string, pulled from a dictionary (action_map)
 # - prints out a "comeback" sentence if asked a certain string, pulled from a dictionary (comeback_map)
 # - prints out an "action" style message, adding 's' to the verb.
